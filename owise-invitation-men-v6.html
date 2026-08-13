@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>حفل زفاف أويس — دعوة</title>
+<meta name="description" content="بكل حب ندعوكم لحضور حفل زفاف أويس على كريمة عصام — الجمعة ٢١ أغسطس ٢٠٢٦ — قاعة الليلك، مدينة الجبيل">
+<meta name="theme-color" content="#0d0b0a">
+<meta name="build" content="men-v1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="دعوة زفاف أويس">
+<meta property="og:description" content="بكل حب ندعوكم لمشاركتنا فرحتنا — الجمعة ٢١ أغسطس ٢٠٢٦ — قاعة الليلك، مدينة الجبيل">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Reem+Kufi:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<script>
+/* low-power / small-screen devices get a lighter render path */
+(function(){try{
+  var m = innerWidth < 900
+       || (navigator.hardwareConcurrency||8) <= 4
+       || /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  if(m) document.documentElement.className='lite';
+}catch(e){}})();
+</script>
+<style>
+/* ============================================================
+   PALETTE
+   ============================================================ */
+:root{
+  --ink:#3a352c;
+  --gold-1:#f3e3bd;
+  --gold-2:#c4b485;
+  --gold:#b4a578;
+  --gold-deep:#7c7048;
+  --cream:#f7f1e6;
+  --veil:rgba(255,253,247,.82);
+  --shadow:rgba(30,22,14,.35);
+  --hero-h: 100svh;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;padding:0}
+html{scroll-behavior:smooth; -webkit-text-size-adjust:100%; overflow-x:clip; max-width:100%}
+body{
+  background:#100c09;
+  color:var(--ink);
+  font-family:'Amiri', 'Scheherazade New', serif;
+  overflow-x:clip; max-width:100vw;
+  -webkit-font-smoothing:antialiased;
+}
+body.locked{overflow:hidden;height:100%}
+img,svg{display:block;max-width:100%}
+button{font-family:inherit}
+
+/* ============================================================
+   THE SCENE  (fixed cinematic backdrop)
+   ============================================================ */
+#scene{
+  position:fixed; inset:0; z-index:0; overflow:hidden;
+  transform:translateZ(0); backface-visibility:hidden;
+  background:
+    /* warm pool of candlelight at the floor */
+    radial-gradient(78% 34% at 50% 105%, rgba(255,232,190,.80) 0%, rgba(244,222,188,.28) 40%, transparent 74%),
+    /* the hall itself */
+    radial-gradient(125% 86% at 50% -2%, #fffefb 0%, #fbf5ea 12%, #f2e8d8 26%, #e2d5bf 44%, #c9b99e 62%, #a08e74 80%, #6b5d4a 94%, #443a2d 100%),
+    #443a2d;
+}
+/* pale sheer drapes framing the hall */
+.drape{
+  position:absolute; top:-5%; bottom:-5%; width:22vw; pointer-events:none;
+  background:
+    repeating-linear-gradient(90deg, rgba(255,255,255,.20) 0 7px, rgba(198,186,168,.12) 7px 17px),
+    linear-gradient(to bottom, rgba(255,252,245,.30), rgba(196,184,166,.16) 62%, transparent);
+  filter:blur(9px); opacity:.30;
+  -webkit-mask-image:linear-gradient(to bottom, #000 0 60%, transparent 96%);
+          mask-image:linear-gradient(to bottom, #000 0 60%, transparent 96%);
+}
+.drape.l{left:-6vw; transform:skewX(-2deg)}
+.drape.r{right:-6vw; transform:skewX(2deg)}
+
+/* polished floor + its reflection */
+.floor{
+  position:absolute; left:0; right:0; bottom:0; height:38%; pointer-events:none;
+  background:
+    linear-gradient(to top, rgba(255,248,234,.42), rgba(238,228,210,.16) 48%, transparent),
+    linear-gradient(to top, rgba(104,88,66,.30), rgba(132,114,88,.10) 44%, transparent 68%);
+  filter:blur(2px);
+}
+.floor::after{
+  content:""; position:absolute; left:50%; bottom:0; width:56%; height:100%;
+  transform:translateX(-50%);
+  background:linear-gradient(to top, rgba(255,250,236,.55), rgba(255,246,226,.18) 55%, transparent);
+  filter:blur(34px);
+}
+/* subtle breathing of the whole hall */
+#hall{
+  position:absolute; inset:-4%;
+  animation:hallBreathe 26s ease-in-out infinite alternate;
+  will-change:transform;
+}
+@keyframes hallBreathe{
+  from{transform:scale(1.00) translate3d(0,0,0)}
+  to  {transform:scale(1.06) translate3d(0,-1.2%,0)}
+}
+#hall svg{width:100%;height:100%}
+
+/* light shafts from the windows */
+.shaft{
+  position:absolute; top:-10%; width:26vw; height:120%;
+  background:linear-gradient(to bottom, rgba(255,252,244,.75), rgba(255,250,238,.16) 45%, transparent 78%);
+  filter:blur(26px);
+  transform-origin:top center;
+  mix-blend-mode:screen;
+  opacity:.55;
+}
+.shaft.a{left:6%;  transform:rotate(9deg);  animation:shaft 14s ease-in-out infinite alternate}
+.shaft.b{left:38%; transform:rotate(-3deg); animation:shaft 18s 1s ease-in-out infinite alternate}
+.shaft.c{right:4%; transform:rotate(-11deg);animation:shaft 16s 2s ease-in-out infinite alternate}
+@keyframes shaft{from{opacity:.32}to{opacity:.68}}
+
+/* chandelier glow */
+.chandelier{
+  position:absolute; top:-2%; left:50%; transform:translateX(-50%);
+  width:min(46vw,420px); aspect-ratio:1/1.15;
+  pointer-events:none;
+}
+.chandelier .halo{
+  position:absolute; inset:-40%;
+  background:radial-gradient(circle at 50% 34%, rgba(255,241,205,.85), rgba(255,229,170,.28) 32%, transparent 66%);
+  animation:halo 6s ease-in-out infinite alternate;
+  mix-blend-mode:screen;
+}
+@keyframes halo{from{opacity:.65;transform:scale(.97)}to{opacity:1;transform:scale(1.04)}}
+
+/* floral bed at the base */
+.florals{position:absolute; left:-6%; right:-6%; bottom:-4%; height:46%; pointer-events:none}
+.florals .blob{position:absolute; border-radius:50%; background:radial-gradient(circle at 38% 34%, #fffdf8, #f3ece0 55%, rgba(226,214,196,0) 72%); filter:blur(.4px)}
+.florals .mist{
+  position:absolute; inset:auto -10% -10% -10%; height:70%;
+  background:linear-gradient(to top, rgba(255,253,248,.92), rgba(255,252,245,.45) 40%, transparent);
+  filter:blur(18px);
+}
+
+/* floral arch draping the top corners */
+.arch{position:absolute; top:-2%; left:-4%; right:-4%; height:52%; pointer-events:none}
+.arch .bl{
+  position:absolute; border-radius:50%;
+  background:radial-gradient(circle at 36% 32%, #fffefb, #f6f0e5 52%, rgba(232,224,210,0) 74%);
+}
+.arch .lf{
+  position:absolute; border-radius:60% 8% 60% 8%;
+  background:linear-gradient(135deg, rgba(214,216,200,.55), rgba(186,192,170,.22));
+  filter:blur(1.4px);
+}
+
+/* candles */
+.candles{position:absolute; left:0; right:0; bottom:0; height:34%; pointer-events:none}
+.candle{position:absolute; bottom:-2%; width:clamp(16px,3.4vw,34px)}
+.candle .wax{
+  height:clamp(56px,13vw,130px); border-radius:6px 6px 2px 2px;
+  background:linear-gradient(to top,#efe3cf,#fffaf0 40%,#fff);
+  box-shadow:0 0 24px rgba(255,236,200,.40);
+}
+.candle .flame{
+  position:absolute; left:50%; top:-16px; width:11px; height:22px; margin-left:-5.5px;
+  border-radius:50% 50% 46% 46%/62% 62% 38% 38%;
+  background:radial-gradient(ellipse at 50% 76%, #fff8e2 0%, #ffe2ae 38%, #f3c579 66%, rgba(245,200,130,0) 78%);
+  animation:flicker 1.7s ease-in-out infinite alternate;
+  transform-origin:50% 100%;
+}
+/* static gradient halo instead of an animated drop-shadow filter */
+.candle .glow{
+  position:absolute; left:50%; top:-44px; width:76px; height:76px; margin-left:-38px;
+  border-radius:50%; pointer-events:none;
+  background:radial-gradient(circle, rgba(255,228,176,.62) 0%, rgba(255,216,150,.22) 38%, rgba(255,210,140,0) 70%);
+  animation:glowPulse 2.9s ease-in-out infinite alternate;
+  will-change:opacity;
+}
+@keyframes glowPulse{from{opacity:.55}to{opacity:1}}
+@keyframes flicker{
+  0%  {transform:scale(1,1) rotate(-2deg); opacity:.92}
+  40% {transform:scale(1.06,.94) rotate(1.5deg); opacity:1}
+  100%{transform:scale(.95,1.08) rotate(-1deg); opacity:.96}
+}
+
+/* petals canvas */
+#petals{position:absolute; inset:0; width:100%; height:100%; pointer-events:none}
+
+/* warm vignette over everything */
+#scene::after{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background:
+    radial-gradient(102% 76% at 50% 40%, transparent 30%, rgba(74,60,42,.16) 58%, rgba(56,44,30,.40) 82%, rgba(40,31,21,.60) 100%),
+    linear-gradient(to bottom, rgba(58,46,32,.22), transparent 20%);
+}
+
+/* ============================================================
+   LITE MODE — drop the expensive compositing on phones
+   ============================================================ */
+.lite .panel,.lite .card,.lite #openBtn{backdrop-filter:none; -webkit-backdrop-filter:none}
+.lite .panel{background:linear-gradient(180deg,#fdfaf3,#f8f3e9)}
+.lite .card{background:linear-gradient(180deg,#fdfaf4,#f7f2e7)}
+.lite #hall{animation:none}
+.lite .drape{display:none}
+.lite .shaft{filter:blur(14px); mix-blend-mode:normal; opacity:.34; animation:none}
+.lite .chandelier .halo{mix-blend-mode:normal; animation:none; opacity:.8}
+.lite .floor::after{filter:blur(18px)}
+.lite .florals .mist{filter:blur(9px)}
+.lite .florals .blob,.lite .arch .bl,.lite .arch .lf{filter:none !important}
+.lite .medallion::before{animation:none; opacity:.8}
+.lite .medallion .lace{filter:drop-shadow(0 12px 22px rgba(52,48,38,.22))}
+.lite .card{transition:none}
+/* no CSS blur filters at all on phones - each one re-rasterises while scrolling */
+.lite .shaft{
+  filter:none; opacity:.30;
+  background:linear-gradient(to bottom, rgba(255,252,244,.42), rgba(255,250,238,.10) 42%, transparent 72%);
+}
+.lite .floor::after{
+  filter:none;
+  background:linear-gradient(to top, rgba(255,250,236,.38), rgba(255,246,226,.10) 52%, transparent);
+}
+.lite .florals .mist{
+  filter:none;
+  background:linear-gradient(to top, rgba(255,253,248,.80), rgba(255,252,245,.30) 42%, transparent);
+}
+.lite .floor{filter:none}
+.lite .medallion .lace{filter:none}
+.lite .medallion::before{
+  filter:none;
+  background:radial-gradient(circle, rgba(255,250,236,.55), rgba(255,246,224,.14) 44%, transparent 68%);
+}
+.lite .panel{box-shadow:0 10px 26px rgba(52,48,38,.14), inset 0 1px 0 rgba(255,255,255,.7)}
+.lite .card{box-shadow:0 8px 20px rgba(52,48,38,.12), inset 0 1px 0 rgba(255,255,255,.7)}
+.lite .unit{box-shadow:0 6px 16px rgba(52,48,38,.12), inset 0 1px 0 #fff}
+.lite .cta{box-shadow:0 8px 20px rgba(104,96,58,.28)}
+/* reveal without a blur transition - blur on a large box is the single worst offender */
+.lite .reveal{
+  filter:none; transform:translateY(24px);
+  transition:opacity .8s cubic-bezier(.19,1,.22,1), transform .8s cubic-bezier(.19,1,.22,1);
+}
+.lite .reveal.in{filter:none}
+.lite .hero-anim{will-change:auto}
+.lite .card:hover{transform:none; box-shadow:0 18px 44px rgba(52,48,38,.16)}
+.lite .amp{animation:none}
+.lite section{min-height:auto; padding:11vh 6vw}
+.lite section.hero{min-height:100svh}
+
+/* ============================================================
+   THE GATE  (tap to open)
+   ============================================================ */
+#gate{
+  position:fixed; inset:0; z-index:60;
+  display:grid; place-items:center;
+  background:radial-gradient(80% 60% at 50% 45%, #221913, #0d0906 75%);
+  transition:opacity 1.5s ease, visibility 1.5s;
+  text-align:center; padding:8vw;
+}
+#gate.gone{opacity:0; visibility:hidden}
+.gate-inner{max-width:620px; animation:gateIn 1.8s cubic-bezier(.19,1,.22,1) both}
+@keyframes gateIn{from{opacity:0; transform:translateY(26px) scale(.96); filter:blur(8px)}to{opacity:1;transform:none;filter:none}}
+.gate-orn{width:min(74vw,330px); margin:0 auto 6px; opacity:.9}
+.gate-orn path,.gate-orn circle,.gate-orn line{stroke:#c0b489; fill:none; stroke-width:1.1;
+  stroke-dasharray:var(--len,600); stroke-dashoffset:var(--len,600);
+  animation:draw 2.6s .4s cubic-bezier(.7,0,.3,1) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.gate-kicker{
+  font-family:'Reem Kufi',sans-serif; font-size:clamp(11px,2.7vw,14px);
+  letter-spacing:.34em; color:#a29a7f; margin:0 0 18px;
+}
+.gate-names{
+  font-family:'Aref Ruqaa Ink','Amiri',serif; font-weight:700;
+  font-size:clamp(34px,10vw,76px); line-height:1.25; margin:0;
+  max-width:100%;
+  background:linear-gradient(100deg,#7d7249 0%,#e3d7b0 26%,#fffbee 42%,#d9cfa2 58%,#7d7249 100%);
+  background-size:280% 100%;
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+  animation:sheen 7s linear infinite;
+}
+@keyframes sheen{from{background-position:280% 0}to{background-position:-40% 0}}
+.gate-sub{font-size:clamp(15px,4vw,20px); color:#a8a08a; margin:22px 0 34px; letter-spacing:.02em}
+#openBtn{
+  position:relative; display:inline-flex; align-items:center; gap:12px;
+  padding:16px 40px; border-radius:999px; cursor:pointer;
+  border:1px solid rgba(192,182,140,.55);
+  background:linear-gradient(180deg, rgba(255,246,226,.10), rgba(192,182,140,.14));
+  color:#ece5cc; font-family:'Reem Kufi',sans-serif; font-size:clamp(14px,3.6vw,16px);
+  letter-spacing:.16em; backdrop-filter:blur(6px);
+  transition:transform .45s cubic-bezier(.19,1,.22,1), box-shadow .45s, border-color .45s;
+  box-shadow:0 0 0 rgba(198,188,144,0);
+  animation:pulseBtn 3.4s ease-in-out infinite;
+}
+@keyframes pulseBtn{0%,100%{box-shadow:0 0 0 0 rgba(198,188,144,.30)}50%{box-shadow:0 0 0 18px rgba(198,188,144,0)}}
+#openBtn:hover{transform:translateY(-3px) scale(1.03); border-color:rgba(230,222,182,.9)}
+#openBtn .dot{width:6px;height:6px;border-radius:50%;background:#ded2a4;box-shadow:0 0 12px #ded2a4}
+
+/* the light-burst when it opens */
+#burst{
+  position:fixed; inset:0; z-index:59; pointer-events:none; opacity:0;
+  background:radial-gradient(circle at 50% 52%, #fffdf6 0%, rgba(255,247,228,.7) 22%, transparent 62%);
+}
+#burst.go{animation:burst 2.2s cubic-bezier(.16,1,.3,1) forwards}
+@keyframes burst{0%{opacity:0;transform:scale(.2)}22%{opacity:1}100%{opacity:0;transform:scale(2.6)}}
+
+/* ============================================================
+   CONTENT
+   ============================================================ */
+main{position:relative; z-index:10; width:100%; max-width:100vw; overflow-x:clip}
+section{
+  min-height:100svh; display:grid; place-items:center;
+  padding:14vh 6vw; position:relative;
+}
+section.tight{min-height:auto; padding:10vh 6vw}
+
+/* ---- the lace medallion ---- */
+.medallion{
+  position:relative; width:min(100%,560px); aspect-ratio:1/1.26;
+  display:grid; place-items:center; margin-inline:auto;
+}
+.medallion .lace{position:absolute; inset:0; filter:drop-shadow(0 22px 44px rgba(52,48,38,.28))}
+.medallion .lace .plate{fill:rgba(255,253,248,.80)}
+.medallion .lace .scallop{fill:rgba(255,254,250,.92)}
+.medallion .lace .perf{fill:rgba(214,198,172,.34)}
+.medallion .lace .ring{fill:none;stroke:rgba(176,166,124,.45);stroke-width:.7}
+.medallion .content{
+  position:relative; z-index:2; width:78%; text-align:center;
+}
+/* halo of light behind the medallion */
+.medallion::before{
+  content:""; position:absolute; inset:-14%; border-radius:50%; z-index:0;
+  background:radial-gradient(circle, rgba(255,250,236,.75), rgba(255,246,224,.22) 46%, transparent 70%);
+  filter:blur(26px);
+  animation:medHalo 8s ease-in-out infinite alternate;
+}
+@keyframes medHalo{from{opacity:.55;transform:scale(.96)}to{opacity:1;transform:scale(1.05)}}
+
+/* headline blessing */
+.blessing{
+  font-family:'Aref Ruqaa Ink','Amiri',serif; font-weight:700;
+  font-size:clamp(15px,3.6vw,22px); line-height:1.9;
+  color:var(--gold-deep); margin:0 0 clamp(14px,4vw,26px); letter-spacing:.01em;
+}
+.lead{
+  font-size:clamp(13px,3.3vw,17px); line-height:2.25; color:#545040;
+  margin:0; letter-spacing:.04em;
+}
+.lead span{display:block}
+
+/* the names */
+.names{
+  display:flex; align-items:center; justify-content:center; gap:clamp(6px,2.4vw,22px);
+  margin:clamp(10px,3vw,18px) 0 0;
+  font-size:clamp(38px,11.5vw,86px);
+  flex-wrap:wrap; max-width:100%;
+}
+.names>*{flex:0 0 auto; white-space:nowrap}
+.names.last{margin:0 0 clamp(12px,3.6vw,20px)}
+.name{
+  font-family:'Aref Ruqaa Ink','Amiri',serif; font-weight:700;
+  font-size:1em; line-height:1.15;
+  background:linear-gradient(100deg,#786d45 0%,#c4b485 22%,#fff9e8 40%,#d1c08e 56%,#786d45 100%);
+  background-size:260% 100%;
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+  animation:sheen 8s linear infinite;
+  filter:drop-shadow(0 3px 10px rgba(104,98,60,.22));
+}
+.amp{
+  font-family:'Cormorant Garamond',serif; font-style:italic;
+  font-size:.5em; color:#b4a578; opacity:.85;
+  animation:beat 3.6s ease-in-out infinite;
+}
+@keyframes beat{0%,100%{transform:scale(1);opacity:.8}50%{transform:scale(1.14);opacity:1}}
+
+.kareema{
+  display:block;
+  font-family:'Amiri',serif; font-weight:400;
+  font-size:.40em; line-height:1.5; letter-spacing:.02em;
+  -webkit-text-fill-color:#8d8353; color:#8d8353;
+  margin-bottom:.10em;
+}
+.joiner{
+  font-family:'Amiri',serif; font-weight:400;
+  font-size:clamp(14px,3.4vw,20px); letter-spacing:.30em;
+  color:#8d8353; opacity:.9; margin:clamp(2px,1vw,6px) 0;
+}
+.gate-joiner{
+  font-family:'Amiri',serif; font-size:clamp(13px,3.2vw,18px);
+  letter-spacing:.30em; color:#a29a7f; opacity:.9; margin:clamp(2px,1vw,6px) 0;
+}
+.hint{
+  position:absolute; bottom:max(3.5vh,18px); left:0; right:0; text-align:center;
+  font-family:'Reem Kufi',sans-serif; font-size:11px; letter-spacing:.3em;
+  color:#5e5947; opacity:.85;
+}
+.hint .chev{
+  display:block; width:11px; height:11px; margin:10px auto 0;
+  border-left:1.4px solid #7a7460; border-bottom:1.4px solid #7a7460;
+  transform:rotate(-45deg); animation:bob 2.2s ease-in-out infinite;
+}
+@keyframes bob{0%,100%{transform:rotate(-45deg) translate(0,0);opacity:.4}50%{transform:rotate(-45deg) translate(-5px,5px);opacity:1}}
+
+/* ---- panels ---- */
+.panel{
+  width:min(100%,720px); margin-inline:auto; text-align:center;
+  background:linear-gradient(180deg, rgba(255,253,248,.90), rgba(253,249,241,.80));
+  border:1px solid rgba(176,166,124,.28);
+  border-radius:clamp(16px,4vw,26px);
+  padding:clamp(28px,7vw,56px) clamp(20px,6vw,52px);
+  box-shadow:0 24px 60px rgba(52,48,38,.20), inset 0 1px 0 rgba(255,255,255,.7);
+  backdrop-filter:blur(10px);
+  position:relative; overflow:hidden;
+}
+.panel::before{
+  content:""; position:absolute; inset:8px; border-radius:inherit;
+  border:1px solid rgba(176,166,124,.20); pointer-events:none;
+}
+.eyebrow{
+  font-family:'Reem Kufi',sans-serif; font-size:clamp(10px,2.6vw,12px);
+  letter-spacing:.36em; color:#8d8353; margin:0 0 18px;
+}
+h2.title{
+  font-family:'Aref Ruqaa Ink','Amiri',serif; font-weight:700;
+  font-size:clamp(24px,6.4vw,38px); color:#6a6045; margin:0 0 20px; line-height:1.6;
+}
+.body-text{font-size:clamp(15px,4vw,19px); line-height:2.35; color:#4a453a; margin:0 auto; max-width:34em}
+.body-text em{font-style:normal; color:#89804f}
+
+/* ornamental divider */
+.divider{width:min(70%,300px); margin:26px auto; opacity:.9}
+.divider path,.divider circle{stroke:#b4a578; fill:none; stroke-width:1}
+.divider .fillgold{fill:#b4a578; stroke:none}
+
+/* ---- detail cards ---- */
+.cards{
+  display:grid; gap:clamp(12px,3vw,18px); width:min(100%,860px); margin-inline:auto;
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));
+}
+.card{
+  background:linear-gradient(180deg, rgba(255,253,248,.92), rgba(250,245,236,.82));
+  border:1px solid rgba(176,166,124,.30); border-radius:20px;
+  padding:clamp(24px,5vw,34px) 18px; text-align:center;
+  box-shadow:0 18px 44px rgba(52,48,38,.16), inset 0 1px 0 rgba(255,255,255,.75);
+  backdrop-filter:blur(8px);
+  transition:transform .6s cubic-bezier(.19,1,.22,1), box-shadow .6s;
+}
+.card:hover{transform:translateY(-7px); box-shadow:0 30px 60px rgba(52,48,38,.24)}
+.card .ic{width:34px;height:34px;margin:0 auto 14px; stroke:#b4a578; fill:none; stroke-width:1.3; stroke-linecap:round; stroke-linejoin:round}
+.card .k{font-family:'Reem Kufi',sans-serif; font-size:11px; letter-spacing:.28em; color:#8d8353; margin:0 0 10px}
+.card .v{font-family:'Aref Ruqaa Ink','Amiri',serif; font-size:clamp(19px,5vw,26px); color:#59533f; margin:0; line-height:1.5}
+.card .v small{display:block; font-family:'Amiri',serif; font-size:clamp(13px,3.4vw,15px); color:#7d7761; margin-top:8px; letter-spacing:.04em}
+
+/* ---- countdown ---- */
+.count{display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(6px,2.2vw,18px); margin-top:8px}
+.unit{
+  min-width:0;
+  background:linear-gradient(180deg, rgba(255,252,245,.94), rgba(247,240,228,.84));
+  border:1px solid rgba(176,166,124,.32); border-radius:16px;
+  padding:clamp(14px,3.6vw,20px) 10px;
+  box-shadow:0 14px 34px rgba(52,48,38,.16), inset 0 1px 0 #fff;
+}
+.unit b{
+  display:block; font-family:'Cormorant Garamond',serif; font-weight:400;
+  font-size:clamp(30px,9vw,50px); line-height:1; color:#6a6045;
+  font-variant-numeric:tabular-nums;
+}
+.unit span{display:block; margin-top:9px; font-family:'Reem Kufi',sans-serif; font-size:10px; letter-spacing:.22em; color:#8d8353}
+.count-note{margin-top:22px; font-size:clamp(14px,3.6vw,17px); color:#5e5947}
+
+/* ---- CTA ---- */
+.cta{
+  display:inline-flex; align-items:center; gap:11px; margin-top:26px;
+  padding:16px 34px; border-radius:999px; text-decoration:none;
+  color:#fdf8ec; font-family:'Reem Kufi',sans-serif; font-size:clamp(13px,3.4vw,15px);
+  letter-spacing:.14em;
+  background:linear-gradient(135deg,#9a8f5e,#d6cb98 45%,#84794d);
+  box-shadow:0 16px 36px rgba(104,96,58,.34);
+  transition:transform .5s cubic-bezier(.19,1,.22,1), box-shadow .5s, filter .5s;
+}
+.cta:hover{transform:translateY(-4px); box-shadow:0 24px 48px rgba(104,96,58,.44); filter:brightness(1.06)}
+.cta svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:1.5}
+.cta.ghost{
+  background:transparent; color:#726a47; border:1px solid rgba(176,166,124,.55);
+  box-shadow:none; margin-inline-start:10px;
+}
+.cta.ghost:hover{background:rgba(176,166,124,.10); box-shadow:none}
+.cta-row{display:flex; flex-wrap:wrap; gap:10px; justify-content:center}
+
+/* ---- closing ---- */
+.closing-word{
+  font-family:'Aref Ruqaa Ink','Amiri',serif; font-weight:700;
+  font-size:clamp(26px,7.6vw,50px); line-height:1.7;
+  background:linear-gradient(100deg,#786d45,#e1d6ac 40%,#fffaea 50%,#cdbd8c 62%,#786d45);
+  background-size:260% 100%;
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+  animation:sheen 9s linear infinite; margin:0;
+}
+footer{
+  position:relative; z-index:10; text-align:center; padding:0 6vw 8vh;
+  font-family:'Reem Kufi',sans-serif; font-size:10px; letter-spacing:.3em; color:#6f6a57; opacity:.7;
+}
+
+/* ============================================================
+   SCROLL REVEALS
+   ============================================================ */
+.reveal{opacity:0; transform:translateY(34px) scale(.985); filter:blur(6px);
+  transition:opacity 1.15s cubic-bezier(.19,1,.22,1), transform 1.15s cubic-bezier(.19,1,.22,1), filter 1.15s}
+.reveal.in{opacity:1; transform:none; filter:none}
+.reveal.d1{transition-delay:.12s}.reveal.d2{transition-delay:.24s}
+.reveal.d3{transition-delay:.36s}.reveal.d4{transition-delay:.48s}
+.reveal.d5{transition-delay:.60s}
+
+/* hero entrance (after gate) */
+body.opened .hero-anim{animation:heroIn 2.2s cubic-bezier(.19,1,.22,1) both}
+body.opened .hero-anim.h2{animation-delay:.25s}
+body.opened .hero-anim.h3{animation-delay:.5s}
+@keyframes heroIn{from{opacity:0; transform:translateY(30px) scale(.94); filter:blur(12px)}to{opacity:1;transform:none;filter:none}}
+.hero-anim{opacity:0}
+body:not(.opened) main{opacity:0}
+body.opened main{opacity:1; transition:opacity .8s ease}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .reveal{opacity:1;transform:none;filter:none}
+  .hero-anim{opacity:1}
+}
+</style>
+</head>
+<body class="locked">
+
+<!-- ================= SCENE ================= -->
+<div id="scene" aria-hidden="true">
+  <div id="hall">
+    <svg viewBox="0 0 1000 1600" preserveAspectRatio="xMidYMin slice">
+      <defs>
+        <linearGradient id="winG" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"  stop-color="#ffffff" stop-opacity="1"/>
+          <stop offset="55%" stop-color="#fffaf0" stop-opacity=".96"/>
+          <stop offset="100%" stop-color="#f3e7d0" stop-opacity=".80"/>
+        </linearGradient>
+        <linearGradient id="wallG" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#f4ece0"/>
+          <stop offset="100%" stop-color="#cfc4b1"/>
+        </linearGradient>
+        <linearGradient id="colG" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%"   stop-color="#b8ab95"/>
+          <stop offset="35%"  stop-color="#f2eade"/>
+          <stop offset="70%"  stop-color="#d8cdba"/>
+          <stop offset="100%" stop-color="#ab9e88"/>
+        </linearGradient>
+        <filter id="soft"><feGaussianBlur stdDeviation="4.5"/></filter>
+        <filter id="softer"><feGaussianBlur stdDeviation="18"/></filter>
+      </defs>
+
+      <!-- back wall -->
+      <rect width="1000" height="1600" fill="url(#wallG)" opacity=".72"/>
+
+      <!-- vaulted ceiling ribs -->
+      <g stroke="#bfb09a" fill="none" opacity=".50" filter="url(#soft)">
+        <path d="M-40 300 Q500 -40 1040 300" stroke-width="7"/>
+        <path d="M-40 200 Q500 -130 1040 200" stroke-width="5"/>
+        <path d="M60 380 Q500 90 940 380" stroke-width="4"/>
+      </g>
+      <!-- coffered ceiling glow -->
+      <ellipse cx="500" cy="46" rx="480" ry="170" fill="#fffdf6" opacity=".34" filter="url(#softer)"/>
+
+      <!-- side colonnade -->
+      <g opacity=".46" filter="url(#soft)">
+        <g fill="url(#colG)">
+          <rect x="18"  y="300" width="66" height="640" rx="10"/>
+          <rect x="150" y="345" width="52" height="590" rx="9"/>
+          <rect x="798" y="345" width="52" height="590" rx="9"/>
+          <rect x="916" y="300" width="66" height="640" rx="10"/>
+        </g>
+        <g fill="#d6c9b4">
+          <rect x="6"   y="278" width="90" height="26" rx="8"/>
+          <rect x="140" y="326" width="72" height="22" rx="7"/>
+          <rect x="788" y="326" width="72" height="22" rx="7"/>
+          <rect x="904" y="278" width="90" height="26" rx="8"/>
+        </g>
+      </g>
+
+      <!-- tall arched windows -->
+      <g filter="url(#soft)">
+        <path d="M236 690 V330 a82 82 0 0 1 164 0 V690 Z" fill="url(#winG)"/>
+        <path d="M600 690 V330 a82 82 0 0 1 164 0 V690 Z" fill="url(#winG)"/>
+        <path d="M412 660 V236 a94 94 0 0 1 188 0 V660 Z" fill="url(#winG)" opacity=".92"/>
+      </g>
+      <!-- window tracery -->
+      <g stroke="#96856d" stroke-width="3" opacity=".38" filter="url(#soft)">
+        <line x1="318" y1="252" x2="318" y2="690"/>
+        <line x1="682" y1="252" x2="682" y2="690"/>
+        <line x1="506" y1="146" x2="506" y2="660"/>
+        <line x1="236" y1="470" x2="400" y2="470"/>
+        <line x1="600" y1="470" x2="764" y2="470"/>
+        <line x1="412" y1="430" x2="600" y2="430"/>
+        <path d="M236 330 a82 82 0 0 1 164 0" fill="none"/>
+        <path d="M600 330 a82 82 0 0 1 164 0" fill="none"/>
+      </g>
+
+      <!-- balustrade -->
+      <g opacity=".38" filter="url(#soft)" fill="#a9997f">
+        <rect x="0" y="830" width="300" height="15" rx="7"/>
+        <rect x="700" y="830" width="300" height="15" rx="7"/>
+        <g>
+          <rect x="26"  y="845" width="12" height="78" rx="6"/>
+          <rect x="86"  y="845" width="12" height="78" rx="6"/>
+          <rect x="146" y="845" width="12" height="78" rx="6"/>
+          <rect x="206" y="845" width="12" height="78" rx="6"/>
+          <rect x="266" y="845" width="12" height="78" rx="6"/>
+          <rect x="722" y="845" width="12" height="78" rx="6"/>
+          <rect x="782" y="845" width="12" height="78" rx="6"/>
+          <rect x="842" y="845" width="12" height="78" rx="6"/>
+          <rect x="902" y="845" width="12" height="78" rx="6"/>
+          <rect x="962" y="845" width="12" height="78" rx="6"/>
+        </g>
+      </g>
+
+      <!-- aisle of light -->
+      <g filter="url(#softer)">
+        <path d="M300 1600 L430 760 H570 L700 1600 Z" fill="#fffcf4" opacity=".62"/>
+      </g>
+      <g opacity=".16" stroke="#fffdf7" stroke-width="5" filter="url(#soft)">
+        <line x1="330" y1="1500" x2="670" y2="1500"/>
+        <line x1="348" y1="1380" x2="652" y2="1380"/>
+        <line x1="365" y1="1270" x2="635" y2="1270"/>
+        <line x1="381" y1="1170" x2="619" y2="1170"/>
+        <line x1="395" y1="1080" x2="605" y2="1080"/>
+        <line x1="407" y1="1000" x2="593" y2="1000"/>
+        <line x1="418" y1="928"  x2="582" y2="928"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="drape l"></div><div class="drape r"></div>
+  <div class="shaft a"></div><div class="shaft b"></div><div class="shaft c"></div>
+  <div class="floor"></div>
+  <div class="arch" id="arch"></div>
+
+  <div class="chandelier">
+    <div class="halo"></div>
+    <svg viewBox="0 0 200 230">
+      <g stroke="#c6ab7d" fill="none" stroke-width="1.1" opacity=".55">
+        <line x1="100" y1="0" x2="100" y2="42"/>
+        <path d="M55 60 Q100 34 145 60"/>
+        <path d="M40 96 Q100 60 160 96"/>
+        <path d="M52 132 Q100 100 148 132"/>
+        <line x1="100" y1="42" x2="100" y2="150"/>
+      </g>
+      <g fill="#fff3d2" opacity=".95">
+        <circle cx="55" cy="60" r="3.4"/><circle cx="145" cy="60" r="3.4"/>
+        <circle cx="40" cy="96" r="4"/><circle cx="160" cy="96" r="4"/>
+        <circle cx="100" cy="52" r="3"/>
+        <circle cx="52" cy="132" r="3.6"/><circle cx="148" cy="132" r="3.6"/>
+        <circle cx="100" cy="150" r="5"/>
+        <circle cx="76" cy="118" r="2.6"/><circle cx="124" cy="118" r="2.6"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="florals" id="florals"><div class="mist"></div></div>
+  <div class="candles" id="candles"></div>
+  <canvas id="petals"></canvas>
+</div>
+
+<!-- ================= GATE ================= -->
+<div id="burst"></div>
+<div id="gate">
+  <div class="gate-inner">
+    <svg class="gate-orn" viewBox="0 0 300 44" fill="none">
+      <path style="--len:320" d="M4 22 H104"/>
+      <path style="--len:320" d="M196 22 H296"/>
+      <path style="--len:260" d="M120 22 q14 -17 30 -17 t30 17 q-14 17 -30 17 t-30 -17Z"/>
+      <circle style="--len:40" cx="150" cy="22" r="5.5"/>
+      <path style="--len:60" d="M104 22 l10 -6 v12 Z"/>
+      <path style="--len:60" d="M196 22 l-10 -6 v12 Z"/>
+    </svg>
+    <p class="gate-kicker">دعوة زفاف</p>
+    <h1 class="gate-names">أويس</h1>
+    <p class="gate-joiner">على</p>
+    <h1 class="gate-names"><span class="kareema">كريمة الأستاذ</span>عصام فرج</h1>
+    <p class="gate-sub">فرحتنا لا تكتمل إلا بحضوركم</p>
+    <button id="openBtn"><span class="dot"></span> افتح الدعوة</button>
+  </div>
+</div>
+
+<!-- ================= CONTENT ================= -->
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="medallion">
+      <svg class="lace" id="lace" viewBox="0 0 560 706" aria-hidden="true"></svg>
+      <div class="content">
+        <p class="blessing hero-anim">بارك الله لهما وبارك عليهما<br>وجمع بينهما في خير</p>
+        <p class="lead hero-anim h2">
+          <span>إلى كل من نال في قلوبنا مكاناً عزيزاً</span>
+          <span>بكل حبٍّ ندعوكم لحضور حفل زفاف</span>
+        </p>
+        <div class="names hero-anim h3">
+          <span class="name">أويس</span>
+        </div>
+        <p class="joiner hero-anim h3">على</p>
+        <div class="names last hero-anim h3">
+          <span class="name"><span class="kareema">كريمة الأستاذ</span>عصام فرج</span>
+        </div>
+        <p class="lead hero-anim h3"><span>وذلك بمشيئة الله تعالى يوم الجمعة</span></p>
+      </div>
+    </div>
+    <div class="hint">اسحب للأسفل<span class="chev"></span></div>
+  </section>
+
+  <!-- WELCOME -->
+  <section class="tight">
+    <div class="panel reveal">
+      <p class="eyebrow">أهلاً بكم</p>
+      <h2 class="title">ليلةٌ نكتبها معكم</h2>
+      <svg class="divider" viewBox="0 0 300 22" fill="none">
+        <path d="M10 11 H120"/><path d="M180 11 H290"/>
+        <circle cx="150" cy="11" r="4.5" class="fillgold"/>
+        <path d="M126 11 q12 -8 20 0 q-12 8 -20 0Z"/>
+        <path d="M174 11 q-12 -8 -20 0 q12 8 20 0Z"/>
+      </svg>
+      <p class="body-text">
+        هناك أفراحٌ لا تُروى بالكلمات، بل تُعاش بالقلوب المجتمعة.
+        وفي ليلةٍ كهذه، لا يكتمل الفرح إلا بوجوه نحبّها حولنا.
+        <br><em>حضوركم هو الزينة، ودعواتكم هي أجمل هدية.</em>
+      </p>
+    </div>
+  </section>
+
+  <!-- DETAILS -->
+  <section>
+    <div style="width:100%">
+      <div class="panel reveal" style="margin-bottom:clamp(16px,4vw,26px)">
+        <p class="eyebrow">تفاصيل الحفل</p>
+        <h2 class="title" style="margin-bottom:0">يوم الجمعة — بمشيئة الله تعالى</h2>
+      </div>
+      <div class="cards">
+        <div class="card reveal d1">
+          <svg class="ic" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+          <p class="k">التاريخ</p>
+          <p class="v">٢١ أغسطس ٢٠٢٦<small>٨ ربيع الأول ١٤٤٨ هـ · 2026.08.21</small></p>
+        </div>
+        <div class="card reveal d2">
+          <svg class="ic" viewBox="0 0 24 24"><path d="M12 21s7-5.3 7-11a7 7 0 1 0-14 0c0 5.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          <p class="k">المكان</p>
+          <p class="v">قاعة الليلك<small>مدينة الجبيل</small></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COUNTDOWN -->
+  <section class="tight">
+    <div class="panel reveal">
+      <p class="eyebrow">العدّ التنازلي</p>
+      <h2 class="title">بقي على فرحتنا</h2>
+      <div class="count" id="count">
+        <div class="unit"><b id="cd-d">--</b><span>يوم</span></div>
+        <div class="unit"><b id="cd-h">--</b><span>ساعة</span></div>
+        <div class="unit"><b id="cd-m">--</b><span>دقيقة</span></div>
+        <div class="unit"><b id="cd-s">--</b><span>ثانية</span></div>
+      </div>
+      <p class="count-note" id="cd-note">ونحن ننتظر لحظة وصولكم</p>
+    </div>
+  </section>
+
+  <!-- VENUE -->
+  <section class="tight">
+    <div class="panel reveal">
+      <p class="eyebrow">الموقع</p>
+      <h2 class="title">قاعة الليلك — مدينة الجبيل</h2>
+      <p class="body-text">أبوابنا مفتوحةٌ لكم، ونسعد باستقبالكم كما يليق بكم.</p>
+      <div class="cta-row" style="margin-top:8px">
+        <a class="cta" id="mapBtn" href="https://maps.app.goo.gl/gLVRPd1mLrSyqaSY6" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M12 21s7-5.3 7-11a7 7 0 1 0-14 0c0 5.7 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          اذهب إلى الموقع
+        </a>
+        <a class="cta ghost" id="calBtn" href="#" download="oais-wedding.ics">
+          <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+          أضف إلى التقويم
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section>
+    <div class="panel reveal" style="background:linear-gradient(180deg, rgba(255,253,248,.92), rgba(250,244,233,.84))">
+      <svg class="divider" viewBox="0 0 300 22" fill="none" style="margin-top:0">
+        <path d="M10 11 H120"/><path d="M180 11 H290"/>
+        <circle cx="150" cy="11" r="4.5" class="fillgold"/>
+        <path d="M126 11 q12 -8 20 0 q-12 8 -20 0Z"/>
+        <path d="M174 11 q-12 -8 -20 0 q12 8 20 0Z"/>
+      </svg>
+      <p class="closing-word">شاكرين لكم تلبية الدعوة</p>
+      <p class="body-text" style="margin-top:18px">
+        ودعواتكم لنا بالبركة والسعادة ودوام الود.
+      </p>
+      <div class="cta-row" style="margin-top:22px">
+        <button class="cta" id="shareBtn" style="border:0;cursor:pointer">
+          <svg viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>
+          شارك الدعوة
+        </button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>أويس — ٢١ أغسطس ٢٠٢٦</footer>
+
+<script>
+/* ============================================================
+   1. LACE MEDALLION  — generated scalloped frame
+   ============================================================ */
+(function buildLace(){
+  const svg=document.getElementById('lace');
+  const W=560,H=706,cx=W/2,cy=H/2,rx=246,ry=320;
+  const ns='http://www.w3.org/2000/svg';
+  const el=(t,a)=>{const e=document.createElementNS(ns,t);for(const k in a)e.setAttribute(k,a[k]);return e;};
+
+  // base plate
+  svg.appendChild(el('ellipse',{cx,cy,rx,ry,class:'plate'}));
+
+  // scallops around the rim
+  const N=64, g=el('g',{class:'scallop'});
+  for(let i=0;i<N;i++){
+    const t=i/N*Math.PI*2;
+    const x=cx+Math.cos(t)*rx, y=cy+Math.sin(t)*ry;
+    const r=10 + 3*Math.abs(Math.sin(t*3));
+    g.appendChild(el('circle',{cx:x.toFixed(2),cy:y.toFixed(2),r:r.toFixed(2)}));
+  }
+  svg.appendChild(g);
+
+  // second, tighter scallop ring
+  const g2=el('g',{class:'scallop'});
+  for(let i=0;i<N;i++){
+    const t=(i+.5)/N*Math.PI*2;
+    const x=cx+Math.cos(t)*(rx-13), y=cy+Math.sin(t)*(ry-13);
+    g2.appendChild(el('circle',{cx:x.toFixed(2),cy:y.toFixed(2),r:9}));
+  }
+  svg.insertBefore(g2, svg.firstChild.nextSibling);
+
+  // lace perforations (three rings of eyelets)
+  const rings=[{k:.90,n:52,r:3.3},{k:.82,n:44,r:2.4},{k:.74,n:36,r:1.8}];
+  rings.forEach((R,idx)=>{
+    const gg=el('g',{class:'perf'});
+    for(let i=0;i<R.n;i++){
+      const t=(i+idx*.4)/R.n*Math.PI*2;
+      gg.appendChild(el('circle',{
+        cx:(cx+Math.cos(t)*rx*R.k).toFixed(2),
+        cy:(cy+Math.sin(t)*ry*R.k).toFixed(2), r:R.r}));
+    }
+    svg.appendChild(gg);
+  });
+
+  // thin gold rings
+  [.955,.70].forEach(k=>svg.appendChild(el('ellipse',{cx,cy,rx:rx*k,ry:ry*k,class:'ring'})));
+})();
+
+/* ============================================================
+   2. FLORALS + CANDLES
+   ============================================================ */
+(function decor(){
+  const LITE=document.documentElement.classList.contains('lite');
+  const fl=document.getElementById('florals');
+  const rnd=(a,b)=>a+Math.random()*(b-a);
+  const blur=v=>LITE?'':`filter:blur(${v}px)`;
+  for(let i=0;i<(LITE?26:70);i++){
+    const d=document.createElement('div'); d.className='blob';
+    const s=rnd(10,46);
+    d.style.cssText=`width:${s}px;height:${s}px;left:${rnd(-4,104)}%;bottom:${rnd(-6,62)}%;opacity:${rnd(.35,.95)};${blur(rnd(0,2.6))}`;
+    fl.appendChild(d);
+  }
+  // floral arch: blossoms sweeping down from both top corners
+  const arch=document.getElementById('arch');
+  for(let side=0; side<2; side++){
+    const AN=LITE?20:52;
+    for(let i=0;i<AN;i++){
+      const t=i/(AN-1);                                  // 0 = corner, 1 = toward centre
+      const x = side ? 100 - (t*46 + rnd(-3,3)) : (t*46 + rnd(-3,3));
+      const y = Math.pow(t,1.7)*72 + rnd(-6,6);      // curve down and inward
+      const s = rnd(7,26)*(1-t*0.40);
+      const d=document.createElement('div');
+      d.className = i%9===0 ? 'lf' : 'bl';
+      d.style.cssText=`width:${s}px;height:${s*(d.className==='lf'?.55:1)}px;`+
+        `left:${x}%;top:${y}%;opacity:${rnd(.28,.82)};`+
+        `${blur(rnd(0,2.4))};transform:rotate(${rnd(0,360)}deg)`;
+      arch.appendChild(d);
+    }
+  }
+
+  const cn=document.getElementById('candles');
+  const spots=LITE?[5,13,23,32,72,84,94]:[4,9,15,22,30,70,78,85,91,96];
+  spots.forEach((p,i)=>{
+    const c=document.createElement('div'); c.className='candle';
+    c.style.left=p+'%';
+    c.style.bottom=(-2+ (i%3)*3)+'%';
+    c.style.transform=`scale(${0.8+ (i%4)*0.13})`;
+    c.innerHTML='<div class="glow" style="animation-delay:'+(i*0.31).toFixed(2)+'s"></div>'+
+                '<div class="flame" style="animation-delay:'+(i*0.23).toFixed(2)+'s"></div><div class="wax"></div>';
+    cn.appendChild(c);
+  });
+})();
+
+/* ============================================================
+   3. PETALS
+   ============================================================ */
+(function petals(){
+  const LITE=document.documentElement.classList.contains('lite');
+  const cv=document.getElementById('petals'), ctx=cv.getContext('2d',{alpha:true});
+  let W,H,DPR,parts=[],raf=null;
+  const COLORS=['rgba(255,255,255,','rgba(252,246,235,','rgba(244,232,213,','rgba(238,224,203,'];
+  const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+  function size(){
+    DPR=Math.min(devicePixelRatio||1, document.documentElement.classList.contains('lite')?1.5:2);
+    W=cv.width=innerWidth*DPR; H=cv.height=innerHeight*DPR;
+    cv.style.width=innerWidth+'px'; cv.style.height=innerHeight+'px';
+  }
+  function make(y){
+    const s=(Math.random()*9+5)*DPR;
+    return{
+      x:Math.random()*W, y:y!==undefined?y:Math.random()*H,
+      s, sp:(Math.random()*.55+.25)*DPR, sw:Math.random()*1.6+.5,
+      ph:Math.random()*Math.PI*2, rot:Math.random()*Math.PI, vr:(Math.random()-.5)*.02,
+      a:Math.random()*.55+.30, c:COLORS[(Math.random()*COLORS.length)|0],
+      squash:Math.random()*.45+.35
+    };
+  }
+  let stars=[];
+  function makeStar(){
+    return{ x:Math.random()*W, y:Math.random()*H,
+      r:(Math.random()*1.3+0.7)*DPR, ph:Math.random()*Math.PI*2,
+      sp:Math.random()*0.018+0.006, drift:(Math.random()-.5)*0.12*DPR };
+  }
+  function init(){
+    size();
+    const LITE=document.documentElement.classList.contains('lite');
+    parts=Array.from({length: LITE?20:62},()=>make());
+    stars=Array.from({length: LITE?10:34},makeStar);
+  }
+  function drawStar(s){
+    const a=(Math.sin(s.ph)*.5+.5);
+    if(a<.04) return;
+    const R=s.r*(0.8+a*1.5);
+    ctx.save(); ctx.translate(s.x,s.y);
+    const g=ctx.createRadialGradient(0,0,0,0,0,R*3.2);
+    g.addColorStop(0,'rgba(255,246,220,'+(a*.95)+')');
+    g.addColorStop(.35,'rgba(255,232,178,'+(a*.30)+')');
+    g.addColorStop(1,'rgba(255,225,160,0)');
+    ctx.fillStyle=g; ctx.beginPath(); ctx.arc(0,0,R*3.2,0,Math.PI*2); ctx.fill();
+    ctx.fillStyle='rgba(255,251,238,'+(a*.85)+')';
+    ctx.beginPath();
+    ctx.moveTo(0,-R*2.2); ctx.quadraticCurveTo(R*.24,-R*.24,R*2.2,0);
+    ctx.quadraticCurveTo(R*.24,R*.24,0,R*2.2);
+    ctx.quadraticCurveTo(-R*.24,R*.24,-R*2.2,0);
+    ctx.quadraticCurveTo(-R*.24,-R*.24,0,-R*2.2);
+    ctx.fill(); ctx.restore();
+  }
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    for(const s of stars){ s.ph+=s.sp; s.y+=s.drift; if(s.y<-20)s.y=H+20; if(s.y>H+20)s.y=-20; drawStar(s); }
+    for(const p of parts){
+      p.y+=p.sp; p.ph+=0.012; p.x+=Math.sin(p.ph)*p.sw*.55; p.rot+=p.vr;
+      if(p.y-p.s>H){ Object.assign(p,make(-20)); }
+      ctx.save();
+      ctx.translate(p.x,p.y); ctx.rotate(p.rot);
+      ctx.fillStyle=p.c+p.a+')';
+      ctx.beginPath();
+      ctx.ellipse(0,0,p.s,p.s*p.squash,0,0,Math.PI*2);
+      ctx.fill();
+      if(!LITE){
+        ctx.fillStyle='rgba(255,255,255,'+(p.a*.5)+')';
+        ctx.beginPath();
+        ctx.ellipse(-p.s*.22,-p.s*.12,p.s*.42,p.s*p.squash*.42,0,0,Math.PI*2);
+        ctx.fill();
+      }
+      ctx.restore();
+    }
+    raf=requestAnimationFrame(draw);
+  }
+  init();
+  if(!reduce){ draw(); }
+  else { ctx.clearRect(0,0,W,H); for(const p of parts){ ctx.save(); ctx.translate(p.x,p.y);
+         ctx.fillStyle=p.c+p.a+')'; ctx.beginPath();
+         ctx.ellipse(0,0,p.s,p.s*p.squash,0,0,Math.PI*2); ctx.fill(); ctx.restore(); } }
+  let lastW=innerWidth, rz=null;
+  addEventListener('resize',()=>{
+    if(innerWidth===lastW) return;      // height-only change = phone address bar, ignore it
+    lastW=innerWidth;
+    clearTimeout(rz); rz=setTimeout(init,220);
+  },{passive:true});
+  if(LITE){
+    let idle=false;
+    addEventListener('scroll',()=>{
+      const past=scrollY>innerHeight*0.9;
+      if(past&&!idle){idle=true; if(raf){cancelAnimationFrame(raf);raf=null;}}
+      else if(!past&&idle){idle=false; if(!raf)raf=requestAnimationFrame(draw);}
+    },{passive:true});
+  }
+  document.addEventListener('visibilitychange',()=>{
+    if(document.hidden){cancelAnimationFrame(raf);raf=null;}
+    else if(!raf && !reduce){raf=requestAnimationFrame(draw);}
+  });
+})();
+
+/* ============================================================
+   4. GATE
+   ============================================================ */
+(function gate(){
+  const g=document.getElementById('gate'), b=document.getElementById('burst');
+  document.getElementById('openBtn').addEventListener('click',()=>{
+    b.classList.add('go');
+    g.classList.add('gone');
+    document.body.classList.remove('locked');
+    document.body.classList.add('opened');
+    setTimeout(()=>{g.remove(); b.remove();},2400);
+  },{once:true});
+})();
+
+/* ============================================================
+   4b. AUTO-FIT the names to their frame (font-agnostic)
+   ============================================================ */
+(function fitNames(){
+  function measure(el,base){
+    const c=el.cloneNode(true);
+    c.style.cssText+=';position:absolute!important;visibility:hidden!important;left:-99999px!important;top:0!important;width:auto!important;max-width:none!important;white-space:nowrap!important;font-size:'+base+'px!important';
+    document.body.appendChild(c);
+    const w=c.getBoundingClientRect().width;
+    c.remove(); return w;
+  }
+  // every element in a group gets ONE shared size = the largest that fits them all
+  function fitGroup(sel){
+    const els=[...document.querySelectorAll(sel)].filter(e=>e.isConnected);
+    if(!els.length) return;
+    els.forEach(e=>e.style.fontSize='');
+    const base=parseFloat(getComputedStyle(els[0]).fontSize);
+    let ratio=1;
+    els.forEach(e=>{
+      const avail=e.parentElement.clientWidth;
+      const w=measure(e,base);
+      if(w>0) ratio=Math.min(ratio, avail/w);
+    });
+    if(ratio<1){
+      const px=(base*ratio*0.97).toFixed(2)+'px';
+      els.forEach(e=>e.style.fontSize=px);
+    }
+  }
+  function fit(){ fitGroup('.names'); fitGroup('.gate-names'); }
+  fit();
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit);
+  addEventListener('resize',fit,{passive:true});
+  setTimeout(fit,600); setTimeout(fit,1800);
+})();
+
+/* ============================================================
+   5. SCROLL REVEAL + PARALLAX
+   ============================================================ */
+(function scrollFx(){
+  const io=new IntersectionObserver(es=>{
+    es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.18, rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach(n=>io.observe(n));
+
+  // parallax is a per-frame transform on a filtered SVG - desktop only
+  if(!document.documentElement.classList.contains('lite')){
+    const hall=document.getElementById('hall');
+    let ticking=false;
+    addEventListener('scroll',()=>{
+      if(ticking) return; ticking=true;
+      requestAnimationFrame(()=>{
+        hall.style.transform=`translate3d(0, ${-scrollY*0.045}px, 0)`;
+        ticking=false;
+      });
+    },{passive:true});
+  }
+})();
+
+/* ============================================================
+   6. COUNTDOWN
+   ============================================================ */
+(function countdown(){
+  const TARGET=new Date('2026-08-21T00:00:00+03:00').getTime();
+  const ar=n=>String(n).padStart(2,'0').replace(/\d/g,d=>'٠١٢٣٤٥٦٧٨٩'[d]);
+  const D=document.getElementById('cd-d'),Hh=document.getElementById('cd-h'),
+        M=document.getElementById('cd-m'),S=document.getElementById('cd-s'),
+        note=document.getElementById('cd-note'), box=document.getElementById('count');
+  function tick(){
+    let d=TARGET-Date.now();
+    if(d<=0){
+      box.style.display='none';
+      note.textContent='اليوم فرحتنا — أهلاً وسهلاً بكم';
+      return;
+    }
+    const s=Math.floor(d/1000);
+    D.textContent=ar(Math.floor(s/86400));
+    Hh.textContent=ar(Math.floor(s%86400/3600));
+    M.textContent=ar(Math.floor(s%3600/60));
+    S.textContent=ar(s%60);
+    setTimeout(tick,1000);
+  }
+  tick();
+})();
+
+/* ============================================================
+   7. CALENDAR FILE + SHARE
+   ============================================================ */
+(function extras(){
+  const ics=[
+    'BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//wedding//AR//',
+    'BEGIN:VEVENT','UID:oais-2026-men-21aug@wedding',
+    'DTSTAMP:20260812T000000Z',
+    'DTSTART;VALUE=DATE:20260821',
+    'DTEND;VALUE=DATE:20260822',
+    'SUMMARY:حفل زفاف أويس',
+    'LOCATION:قاعة الليلك - مدينة الجبيل',
+    'DESCRIPTION:بكل حب ندعوكم لحضور حفل زفاف أويس على كريمة الأستاذ عصام فرج\\nالموقع: https://maps.app.goo.gl/gLVRPd1mLrSyqaSY6',
+    'END:VEVENT','END:VCALENDAR'
+  ].join('\r\n');
+  document.getElementById('calBtn').href =
+    'data:text/calendar;charset=utf-8,'+encodeURIComponent(ics);
+
+  const btn=document.getElementById('shareBtn');
+  btn.addEventListener('click',async()=>{
+    const data={title:'دعوة زفاف أويس',
+      text:'بكل حبٍّ ندعوكم لحضور حفل زفافنا — الجمعة ٢١ أغسطس ٢٠٢٦',
+      url:location.href};
+    try{
+      if(navigator.share){ await navigator.share(data); }
+      else{ await navigator.clipboard.writeText(location.href);
+        const old=btn.innerHTML; btn.innerHTML='تم نسخ الرابط ✓';
+        setTimeout(()=>btn.innerHTML=old,2200); }
+    }catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
